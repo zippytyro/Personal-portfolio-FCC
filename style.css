@@ -1,0 +1,302 @@
+:root {
+    --dark: #0b032d;
+    --onion: #843b62;
+    --light-onion: #f67e7d;
+    --skin: #ffb997;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    font-family: 'Prompt', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.7rem;
+    color: var(--dark);
+    margin-top: 3rem;
+}
+
+/* navbar */
+#navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: var(--dark);
+    top: 0;
+    right: -100px;
+    height: 100%;
+    width: 0px;
+    transform: skewX(10deg);
+    z-index: 2;
+    transition: linear 0.4s;
+}
+
+#closeNav {
+    text-decoration: none;
+    position: absolute;
+    transition:0.5s ease-out;
+    top: 1.5rem;
+    right: 90px;
+    z-index: 4;
+    color: var(--skin);
+    font-size: 7rem;
+    transform: skewX(-10deg);
+    display: none;
+}
+
+#openNav {
+    position: fixed;
+    top: 1.9rem;
+    right: 2.6rem;
+    font-size: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
+
+.nav-link {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    transform: skewX(-10deg);
+}
+
+.nav-link li>a {
+    color: var(--skin);
+    text-decoration: none;
+}
+
+#navopen-background {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--skin);
+    top: 2rem;
+    right: 2rem;
+}
+
+/* welcome section */
+#welcome-section {
+    width: 100%;
+    display: flex;
+    height:100vh;
+    flex-direction: row;
+    justify-content: center;
+    background-image: linear-gradient(to right, #0b032d99, #843b6299), url(img/welcome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    color: var(--skin);
+}
+
+.welcome-text {
+    font-size: 3rem;
+    transition: ease-in 0.3s;
+}
+
+/* Project section */
+#projects {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.project-tile {
+    margin: 1rem;
+    max-width: 300px;
+    border: 2px solid var(--light-onion);
+    background-color: var(--dark);
+    color: var(--skin);
+    transition: ease-out 0.5s;
+}
+
+.project-tile>img {
+    max-width: 100%;
+    text-align: center;
+}
+
+.project-links {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--dark);
+}
+
+.project-links .live,
+.project-links .code {
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark);
+    width:40%;
+}
+
+.project-tile p {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.live,
+.code {
+    background-color: var(--skin);
+}
+
+.live-after {
+    color: var(--skin);
+}
+
+.code-after {
+    color: var(--skin);
+}
+
+.live:hover .live-after {
+    color: var(--dark);
+    transition: 0.6s;
+}
+
+.code:hover .code-after {
+    color: var(--dark);
+    transition: 0.6s;
+}
+
+.live:focus .live-after {
+    color: var(--dark);
+    transition: 0.6s;
+}
+
+.code:focus .code-after {
+    color: var(--dark);
+    transition: 0.6s;
+}
+
+/* social */
+#social {
+    background-color: var(--dark);
+    height: 200px;
+}
+
+.social-links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links>a {
+    color: var(--skin);
+    padding: 4rem 2rem;
+    transition: transform ease-out 0.3s;
+}
+
+#social h2 {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    color: var(--skin);
+    font-size: 2.7rem;
+}
+
+.social-links>a:hover {
+    transform: translateY(5px);
+}
+
+/* footer section */
+#footer {
+    background-color: #f67e7d99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: var(--onion);
+}
+
+/* typing animation */
+#type {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid var(--light-onion);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--skin);
+    }
+}
+
+/* media queries */
+@media screen and (min-width:700px) {
+    #projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .welcome-text {
+        font-size: 4rem;
+    }
+
+    #social h2,
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    .social-links>a {
+        font-size: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 2.5rem;
+    }
+}

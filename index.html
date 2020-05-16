@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashwat - Portfolio</title>
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav id="navbar">
+        <a href="javascript:void(0)" id="closeNav" onclick="closeNav()">&times;</a>
+        <ul class="nav-link">
+            <li><a onclick="closeNav()" href="#welcome-section">Home</a></li>
+            <li><a onclick="closeNav()" href="#projects">Projects</a></li>
+            <li><a onclick="closeNav()" href="#social">Contact Me</a></li>
+        </ul>
+    </nav>
+    <div id="navopen-background"><span onclick="openNav()" id="openNav"><i class="fa fa-bars"></i></span></div>
+    <!-- welcome section -->
+    <section id="welcome-section">
+        <div class="welcome-text">
+            <h1>Shashwat Verma</h1>
+            <p id="type">A web designer</p>
+        </div>
+    </section>
+
+    <!-- projects section -->
+    <h2>Projects I've worked on</h2>
+    <section id="projects">
+
+        <div class="project-tile">
+            <p>Survey Website</p>
+            <img src="img/deimosbos.PNG" alt="deimosbos survey">
+            <div class="project-links">
+                <a target="_blank" href="https://deimos-survey.netlify.app" class="live">Live <span
+                        class="live-after"><i class="fa fa-location-arrow"></i></span></a>
+                <a target="_blank" href="https://github.com/zippytyro/survey-deimosbos" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+        <div class="project-tile">
+            <p>Drummer website</p>
+            <img src="img/drummer.PNG" alt="Drum kit website">
+            <div class="project-links">
+                <a target="_blank" href="https://drummer.now.sh" class="live">Live <span class="live-after"><i
+                            class="fa fa-location-arrow"></i></span></a>
+                <a target="_blank" href="https://github.com/zippytyro/Drummer" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+        <div class="project-tile">
+            <p>Javascript docs website</p>
+            <img src="img/js-doc.PNG" alt="javascript documentation site">
+            <div class="project-links">
+                <a href="https://js-docs.now.sh" target="_blank" class="live">Live <span class="live-after"><i
+                            class="fa fa-location-arrow"></i></span></a>
+                <a href="https://github.com/zippytyro/JS-documentation-page" target="_blank" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+        <div class="project-tile">
+            <p>Stockly</p>
+            <img src="img/stockly.PNG" alt="Stockly website">
+            <div class="project-links">
+                <a href="https://stockly.ml" target="_blank" class="live">Live <span class="live-after"><i
+                            class="fa fa-location-arrow"></i></span></a>
+                <a href="https://github.com/zippytyro/Stockly" target="_blank" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+        <div class="project-tile">
+            <p>Simon game</p>
+            <img src="img/simon.PNG" alt="simon game website">
+            <div class="project-links">
+                <a href="https://simon-game.ml" target="_blank" class="live">Live <span class="live-after"><i
+                            class="fa fa-location-arrow"></i></span></a>
+                <a href="https://github.com/zippytyro/Simon-game" target="_blank" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+        <div class="project-tile">
+            <p>Tribute page</p>
+            <img src="img//tribute.PNG" alt="Tribute page website">
+            <div class="project-links">
+                <a href="https://zippytyro.github.io/Tribute-Page-Brahmagupta/" target="_blank" class="live">Live <span
+                        class="live-after"><i class="fa fa-location-arrow"></i></span></a>
+                <a href="https://github.com/zippytyro/Tribute-Page-Brahmagupta" target="_blank" class="code">Code <span
+                        class="code-after"><i class="fa fa-code"></i></span></a>
+            </div>
+        </div>
+    </section>
+    <!-- social section -->
+    <section id="social">
+        <h2>Say Hello!</h2>
+        <div class="social-links">
+            <a target="_blank" href="https://instagram.com/zippytyro" id="profile-link"><i
+                    class="fa fa-2x fa-instagram"></i></a>
+            <a target="_blank" href="https://facebook.com/zippytyro" id="profile-link"><i
+                    class="fa fa-2x fa-facebook"></i></a>
+            <a target="_blank" href="https://linkedin.com/in/zippytyro" id="profile-link"><i
+                    class="fa fa-2x fa-linkedin"></i></a>
+            <a target="_blank" href="https://twitter.com/zippytyro" id="profile-link"><i
+                    class="fa fa-2x fa-twitter"></i></a>
+            <a target="_blank" href="https://github.com/zippytyro" id="profile-link"><i
+                    class="fa fa-2x fa-github"></i></a>
+        </div>
+    </section>
+    <footer id="footer">
+        <p>Shashwat Verma &copy; 2020 </p>
+        <p>Made with &hearts; in India.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
